@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    var valores = getG();
+    var game = valores['par'];
+    $('#mensaje-aux2').attr('juego', game);
+</script>
+<p id="mensaje-aux2" juego="">Escribe tus Iniciales</p>
+<div class="linea-puntacion">
+    <input type="text" id="iniciales" name="iniciales" maxlength="4" minlength="2" required placeholder="iniciales">
+</div>
+<ul id="menu-aux2">
+    <li class="boton-menu anim-g" id="saveR">aceptar</li>
+</ul>
+<script type="text/javascript">
+    $(document).ready(function() {
+        srecord();
+    });
+</script>

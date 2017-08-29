@@ -1,0 +1,678 @@
+@charset "UTF-8";
+
+/****************RESET********************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url(../fuentes/GOTHIC.TTF), url(../fuentes/GOTHICB.TTF), url(../fuentes/GOTHICBI.TTF), url(../fuentes/GOTHICI.TTF);
+}
+
+
+/****************fin**********************/
+
+
+/****************TECNICO******************/
+
+.clear {
+    clear: both;
+}
+
+.anim-g {
+    transition: all 250ms linear;
+    -webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+    -o-transition: all 250ms linear;
+    -ms-transition: all 250ms linear;
+}
+
+.anim-ga {
+    transition: all 1000ms linear;
+    -webkit-transition: all 1000ms linear;
+    -moz-transition: all 1000ms linear;
+    -o-transition: all 1000ms linear;
+    -ms-transition: all 1000ms linear;
+}
+
+.anim-co {
+    transition: left 500ms linear;
+    -webkit-transition: left 500ms linear;
+    -moz-transition: left 500ms linear;
+    -o-transition: left 500ms linear;
+    -ms-transition: left 500ms linear;
+}
+
+.adaptar-img {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.adaptar-img-fondo {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+img {
+    line-height: 0;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+#contenedor {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 35px;
+}
+
+body {
+    height: 100%;
+    background-color: white;
+    font-family: "Century Gothic";
+    overflow: hidden;
+    position: relative;
+}
+
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#main-scroller {
+    width: 200%;
+    position: relative;
+    height: 100%;
+}
+
+.seccion {
+    height: 100%;
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+.seccion-aux {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 500;
+    left: 100%;
+    top: 0;
+    background-color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.atras {
+    float: left;
+    padding-left: 25px;
+    padding-top: 6px;
+}
+
+html {
+    height: 100%;
+}
+
+#contenedor-pregunta {
+    padding: 35px;
+}
+
+#logo-app {
+    margin-left: auto;
+    margin-right: auto;
+    width: 223px;
+    height: 210px;
+    margin-bottom: 25px;
+}
+
+#menu-app .boton-menu {
+    height: 45px;
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    border: solid 1px rgba(200, 200, 200, 1);
+    cursor: pointeR;
+    background-color: white;
+    padding-top: 11px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#menu-app .boton-menu:active {
+    background-color: rgba(160, 182, 255, 1);
+    color: white;
+}
+
+#lista-opciones-pregunta .boton-menu {
+    /*min-height: 45px;*/
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    border: solid 1px rgba(200, 200, 200, 1);
+    cursor: pointeR;
+    background-color: white;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#lista-opciones-pregunta .boton-menu:active {
+    background-color: rgba(160, 182, 255, 1);
+    color: white;
+}
+
+#contenedor-pregunta p {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.cabecera-seccion {
+    cursor: pointer;
+    height: 56px;
+    box-sizing: border-box;
+    border-bottom: solid 2px rgba(255, 0, 0, 1);
+}
+
+.cabecera-seccion:active {
+    background-color: rgba(160, 182, 255, 1);
+}
+
+.cabecera-seccion-rec {
+    cursor: pointer;
+    height: 56px;
+    box-sizing: border-box;
+    border-bottom: solid 2px rgba(255, 0, 0, 1);
+}
+
+.cabecera-seccion-rec:active {
+    background-color: rgba(160, 182, 255, 1);
+}
+
+.texto-grande {
+    font-size: 18px;
+}
+
+.titulo-cabecera {
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    float: right;
+    padding-right: 35px;
+    padding-top: 20px;
+}
+
+.texto-normal {
+    font-size: 16px;
+}
+
+#crono {
+    position: absolute;
+    bottom: 4px;
+    height: 25px;
+    /* padding-left: 35px; */
+    /* padding-right: 35px; */
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    z-index: 105;
+}
+
+#cuenta {
+    height: 25px;
+    box-sizing: border-box;
+    /* width: 30px; */
+    text-align: center;
+    /* float: left; */
+}
+
+#progress-bar {
+    height: 4px;
+    background-color: rgba(200, 200, 200, 1);
+    position: relative;
+}
+
+#inner-progress-bar {
+    height: 4px;
+    background-color: red;
+}
+
+.texto-grande {
+    font-size: 20px;
+}
+
+.red {
+    color: rgba(255, 0, 0, 1);
+}
+
+#cubre-imagen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 105;
+    top: 0;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+#articulo figure {
+    position: relative;
+}
+
+#contador-preguntas {
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: white;
+    position: absolute;
+    top: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 15px;
+}
+
+#heart {
+    float: left;
+    height: 26px;
+    width: 28px;
+    margin-right: 5px;
+    background-image: url(../img/heart.png);
+}
+
+#nvidas {
+    float: left;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    top: 5px;
+}
+
+#vidas {
+    position: absolute;
+    top: 35px;
+    left: 15px;
+}
+
+#cubierta-winner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: none;
+}
+
+#cubierta-p {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#cubierta-winner-contra {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: none;
+}
+
+.coins {
+    width: 30px;
+    height: 30px;
+    float: right;
+    background-image: url(../img/coins.png);
+    position: relative;
+    top: -6px;
+}
+
+.texto-puntuacion-winner-red {
+    float: left;
+    margin-right: 5px;
+    color: red;
+}
+
+#cubre-puntos {
+    float: right;
+}
+
+.texto-puntuacion-winner {
+    font-size: 16px;
+    float: left;
+}
+
+.linea-puntacion {
+    /* font-size: 18px; */
+    /* font-weight: bold; */
+    padding: 40px;
+    padding-top: 0px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+#mensaje-ganador {
+    font-size: 30px;
+    padding: 40px;
+    line-height: 1.4;
+    color: rgba(0, 128, 128, 1);
+}
+
+#mensaje-aux2 {
+    font-size: 30px;
+    padding: 40px;
+    line-height: 1.4;
+    color: rgba(0, 128, 128, 1);
+}
+
+#menu-winner {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+}
+
+#menu-aux2 {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+}
+
+#menu-aux2 .boton-menu {
+    /*min-height: 45px;*/
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    border: solid 1px rgba(200, 200, 200, 1);
+    cursor: pointeR;
+    background-color: white;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#menu-aux2 .boton-menu:active {
+    background-color: rgba(160, 182, 255, 1);
+    color: white;
+}
+
+#menu-winner .boton-menu {
+    /*min-height: 45px;*/
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    border: solid 1px rgba(200, 200, 200, 1);
+    cursor: pointeR;
+    background-color: white;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#menu-winner .boton-menu:active {
+    background-color: rgba(160, 182, 255, 1);
+    color: white;
+}
+
+.vida {
+    float: left;
+    margin-right: 5px;
+    height: 22px;
+    width: 22px;
+    background-image: url(../img/vida.png);
+}
+
+.vida-e {
+    float: left;
+    margin-right: 5px;
+    height: 22px;
+    width: 22px;
+    background-image: url(../img/vida-e.png);
+    transform: rotateY(180deg);
+}
+
+#cubre-puntos-a {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+
+.texto-puntuacion-winner-red-a {
+    font-size: 18px;
+    color: white;
+    float: left;
+    margin-right: 5px;
+}
+
+#suma-puntos-a {
+    position: absolute;
+    font-size: 18px;
+    color: rgba(0, 255, 0, 1);
+    /* font-weight: bold; */
+    right: 10px;
+    top: 35px;
+}
+
+#iniciales {
+    box-sizing: border-box;
+    height: 35px;
+    border: solid 1px rgba(200, 200, 200, 1);
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(249, 249, 249, 1);
+    width: 100px;
+    outline: 0;
+}
+
+#quitar-puntos-a {
+    position: absolute;
+    font-size: 18px;
+    color: rgba(255, 0, 0, 1);
+    /* font-weight: bold; */
+    right: 10px;
+    top: 35px;
+    z-index: 201;
+}
+
+.item-record {
+    height: 40px;
+    border-bottom: solid 1px rgba(200, 200, 200, 1);
+    box-sizing: border-box;
+}
+
+.jugador {
+    float: left;
+    padding-left: 35px;
+    padding-top: 11px;
+}
+
+.puntuacion-record {
+    float: right;
+    padding-right: 35px;
+}
+
+.pre {
+    float: left;
+    margin-right: 7px;
+    padding-top: 11px;
+    color: rgba(255, 0, 0, 1);
+}
+
+.coins-record {
+    width: 30px;
+    height: 30px;
+    float: right;
+    background-image: url(../img/coins.png);
+    position: relative;
+    top: 4px;
+}
+
+#lista-records {
+    height: calc(100% - 56px);
+    position: relative;
+    overflow-y: auto;
+}
+
+#cubierta-principal {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 600;
+    left: 0;
+    background-color: white;
+    top: 0;
+}

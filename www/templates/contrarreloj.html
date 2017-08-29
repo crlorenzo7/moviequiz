@@ -1,0 +1,80 @@
+<header class="anim-g cabecera-seccion">
+    <figure class="atras"><img src="img/atras-in.png" /></figure>
+    <h2 class="texto-grande titulo-cabecera">Contrarreloj</h2>
+</header>
+<figure>
+    <div id="fade">
+        <img id="impregunta" src="img/pregunta.jpg" />
+    </div>
+    <div id="cubre-imagen">
+        <p id="contador-preguntas">1</p>
+        <div id="cubre-puntos-a">
+            <p class="texto-puntuacion-winner-red-a" id="pwina">0</p>
+            <figure class="coins adaptar-img"></figure>
+        </div>
+        <div id="suma-puntos-a" class="hide">+125</div>
+        <div id="quitar-puntos-a" class="hide">-50</div>
+    </div>
+    <footer id="crono">
+        <p class="texto-grande red" id="cuenta">1:00</p>
+        <div id="progress-bar">
+            <div id="inner-progress-bar" class="anim-g"></div>
+        </div>
+    </footer>
+</figure>
+<div id="contenedor-pregunta">
+    <p class="texto-normal" id="enunciado">¿ que actor interpreto el papel del Joker en la trilogia batman del director Christopher Nolan?</p>
+    <ul id="lista-opciones-pregunta">
+        <li class="boton-menu anim-g">Christian Bale</li>
+        <li class="boton-menu anim-g">Heath Leger</li>
+        <li class="boton-menu anim-g">Jack Nicholson</li>
+
+    </ul>
+</div>
+<div id="cubierta-winner-contra">
+    <p id="mensaje-ganador">¡¡Se acabo el Tiempo!!</p>
+    <div class="linea-puntacion">
+        <p class="texto-puntuacion-winner">Tu puntuacion:</p>
+        <div id="cubre-puntos">
+            <p class="texto-puntuacion-winner-red" id="pwin">1500</p>
+            <figure class="coins adaptar-img"></figure>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="linea-puntacion">
+        <p class="texto-puntuacion-winner">Preguntas:</p>
+        <div id="cubre-puntos">
+            <p class="texto-puntuacion-winner-red" id="pre">25</p>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="linea-puntacion">
+        <p class="texto-puntuacion-winner">Aciertos:</p>
+        <div id="cubre-puntos">
+            <p class="texto-puntuacion-winner-red" id="pac">20</p>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="linea-puntacion">
+        <p class="texto-puntuacion-winner">Errores:</p>
+        <div id="cubre-puntos">
+            <p class="texto-puntuacion-winner-red" id="perr">5</p>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <ul id="menu-winner">
+        <li class="boton-menu anim-g" id="guardar-record">guardar puntuacion</li>
+        <li class="boton-menu anim-g" id="volverm">volver</li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function() {
+        control_articulo();
+        menu_win();
+        contra();
+    });
+</script>
